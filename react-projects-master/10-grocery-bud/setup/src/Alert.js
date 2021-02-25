@@ -6,6 +6,7 @@ const Alert = ({ type, message, removeAlert }) => {
       removeAlert();
     }, 3000);
     return () => clearTimeout(timeout);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return <p className={`alert alert-${type}`}>{message}</p>;
 };
